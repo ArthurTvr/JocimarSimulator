@@ -1,5 +1,5 @@
 const respostas = {
-  frase1: "'Que ódio do Ricardo'",
+  frase1: "'Tá me garrando um ódio do Ricardo'",
   frase2: "'Valeu, um abraço, tchau tchau'",
   frase3: "'A culpa é do Ricardo. Pq ela é minha e eu coloco em quem eu quiser'",
   frase4: "'Vou ligar pro Gentil'"
