@@ -1,12 +1,24 @@
-const respostas = {
-  frase1: "'Tá me garrando um ódio do Ricardo'",
-  frase2: "'Valeu, um abraço, tchau tchau'",
-  frase3: "'A culpa é do Ricardo. Pq ela é minha e eu coloco em quem eu quiser'",
-  frase4: "'Vou ligar pro Gentil'"
+const audios = {
+  frase1: "audio/frase1.mp3",
+  frase2: "audio/frase2.mp3",
+  frase3: "audio/frase3.mp3",
+  frase4: "audio/frase4.mp3"
 };
+
+const audioPlayer = document.getElementById("audioPlayer");
 
 document.getElementById("fraseSelect").addEventListener("change", function () {
   const valorSelecionado = this.value;
-  const resposta = respostas[valorSelecionado] || "";
-  document.getElementById("resposta").textContent = resposta;
+
+  if (audios[valorSelecionado]) {
+    audioPlayer.src = audios[valorSelecionado];
+    audioPlayer.load();
+    audioPlayer.play();
+  } else {
+    audioPlayer.pause();
+    audioPlayer.src = "";
+  }
+
+  // Oculta o texto de resposta
+  document.getElementById("resposta").textContent = "";
 });

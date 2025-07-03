@@ -9,3 +9,7 @@ body {
   font-size: 1.5em;
   color: #333;
 }
+
+#audioPlayer {
+  margin-top: 20px;
+}
